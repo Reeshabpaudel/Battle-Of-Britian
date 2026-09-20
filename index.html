@@ -1,673 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Battle of Britain | 1940</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Battle of Britain, 1940</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header class="hero">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-            <p class="eyebrow">MILITARY HISTORY • ROYAL AIR FORCE</p>
-
-            <h1>BATTLE OF BRITAIN</h1>
-
-            <p class="dates">10 JULY — 31 OCTOBER 1940</p>
-
-            <p class="subtitle">
-                The struggle for air superiority over Britain
-            </p>
-
-            <button class="start-btn" onclick="scrollToSection('background')">
-                EXPLORE THE BATTLE
-            </button>
-        </div>
-
-    </header>
-
-
-    <!-- ================= NAVIGATION ================= -->
-
-    <nav class="navbar">
-
-        <div class="nav-title">
-            BATTLE OF BRITAIN
-        </div>
-
-        <div class="nav-links">
-            <a href="#background">Background</a>
-            <a href="#forces">Forces</a>
-            <a href="#timeline">Timeline</a>
-            <a href="#turning-points">Turning Points</a>
-            <a href="#outcome">Outcome</a>
-            <a href="#lessons">Lessons</a>
-            <a href="#archive">Archive</a>
-        </div>
-
+  <header class="site-header">
+    <a class="brand" href="#top">Battle of Britain</a>
+    <nav aria-label="Sections">
+      <a href="#background">Background</a>
+      <a href="#events">Key events</a>
+      <a href="#resources">Resources</a>
     </nav>
+  </header>
 
+  <main id="top">
 
-    <!-- ================= BACKGROUND ================= -->
-
-    <section id="background" class="section">
-
-        <div class="section-heading">
-            <span>01</span>
-            <h2>BACKGROUND</h2>
-        </div>
-
-        <div class="content-grid">
-
-            <div class="text-card">
-                <h3>Fall of France</h3>
-
-                <p>
-                    In June 1940, France fell to Germany. Britain was now
-                    facing Nazi Germany largely alone in Western Europe.
-                </p>
-            </div>
-
-            <div class="text-card">
-                <h3>The Strategic Problem</h3>
-
-                <p>
-                    Germany planned a possible invasion of Britain.
-                    Before an invasion could take place, the Luftwaffe
-                    needed to establish sufficient control of the air.
-                </p>
-            </div>
-
-            <div class="text-card">
-                <h3>Operation Sea Lion</h3>
-
-                <p>
-                    Operation Sea Lion was the German plan for the invasion
-                    of Britain. Its execution depended heavily upon
-                    achieving air superiority over southern England.
-                </p>
-            </div>
-
-            <div class="text-card">
-                <h3>Britain's Defence</h3>
-
-                <p>
-                    Britain relied on Fighter Command, radar stations,
-                    the Observer Corps, ground control, aircraft production
-                    and an integrated command-and-control system.
-                </p>
-            </div>
-
-        </div>
-
+    <!-- Cover. To add a photo, save it as images/cover.jpg (it is shown as a navy duotone). -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>The Battle of Britain</h1>
+        <p class="lede">July to October 1940: the first major campaign fought almost entirely in the air.</p>
+        <p class="presenter">Presenter name, module, date</p>
+      </div>
     </section>
 
+    <!-- Background -->
+    <section class="section section-light" id="background">
+      <div class="wrap">
+        <h2>Background</h2>
+        <div class="background-grid">
 
-    <!-- ================= FORCES ================= -->
+          <div class="prose">
+            <h3>Britain alone</h3>
+            <p>By late June 1940 Germany had overrun France, which signed an armistice on 22 June, and British forces had been evacuated from Dunkirk. Britain was the only power in Western Europe still fighting. Hitler expected it to seek terms, and Churchill's government refused.</p>
 
-    <section id="forces" class="section dark-section">
+            <h3>The German plan</h3>
+            <p>On 16 July Hitler ordered preparations for an invasion, code-named Operation Sea Lion. A crossing of the Channel was not possible while the Royal Air Force could contest the sky above it, so the Luftwaffe was tasked with destroying Fighter Command and winning air superiority over southern England. Two air fleets based in France and the Low Countries carried most of the attack, and a third flew from Norway and Denmark.</p>
 
-        <div class="section-heading">
-            <span>02</span>
-            <h2>FORCES & COMMAND</h2>
-        </div>
+            <h3>The British defence</h3>
+            <p>Air Chief Marshal Sir Hugh Dowding, head of Fighter Command, had built an integrated defence, now called the Dowding System. Chain Home radar stations and the Royal Observer Corps detected raids. Their reports were filtered and plotted at Fighter Command headquarters at Bentley Priory, then passed to Group and Sector control rooms that directed squadrons by radio. Britain did not have to win outright. It had to keep Fighter Command in being.</p>
 
-        <div class="forces-grid">
+            <h3>The forces</h3>
+            <p>The Hurricane and Spitfire defended against Messerschmitt Bf 109 and Bf 110 fighters escorting Heinkel He 111, Dornier Do 17 and Junkers Ju 88 bombers and Ju 87 dive bombers. 11 Group under Air Vice-Marshal Keith Park covered the south-east and London and took the brunt of the fighting. 12 Group under Air Vice-Marshal Trafford Leigh-Mallory covered the Midlands and supported it.</p>
+          </div>
 
-            <div class="force-card raf">
-                <div class="card-number">01</div>
-
-                <h3>ROYAL AIR FORCE</h3>
-
-                <p>
-                    RAF Fighter Command defended British airspace
-                    under Air Chief Marshal Hugh Dowding.
-                </p>
-
-                <div class="commander">
-                    <strong>Key Commanders</strong>
-                    <br>
-                    Hugh Dowding
-                    <br>
-                    Keith Park
-                </div>
-            </div>
-
-
-            <div class="force-card luftwaffe">
-                <div class="card-number">02</div>
-
-                <h3>LUFTWAFFE</h3>
-
-                <p>
-                    The German Luftwaffe attempted to destroy Fighter
-                    Command and establish air superiority.
-                </p>
-
-                <div class="commander">
-                    <strong>Key Commanders</strong>
-                    <br>
-                    Hermann Göring
-                    <br>
-                    Albert Kesselring
-                </div>
-            </div>
-
-
-            <div class="force-card system">
-                <div class="card-number">03</div>
-
-                <h3>DOWDING SYSTEM</h3>
-
-                <p>
-                    Britain's defence depended on radar, observation,
-                    communications, filtering and fighter interception.
-                </p>
-
-                <div class="commander">
-                    <strong>Components</strong>
-                    <br>
-                    Radar
-                    <br>
-                    Observer Corps
-                    <br>
-                    GCI
-                </div>
-            </div>
+          <aside class="glance" aria-label="At a glance">
+            <h3>At a glance</h3>
+            <dl>
+              <dt>Dates</dt>
+              <dd>10 July to 31 October 1940, the dates the RAF uses. Some historians start earlier or end later.</dd>
+              <dt>Attacker</dt>
+              <dd>The Luftwaffe, under Hermann Göring.</dd>
+              <dt>Defender</dt>
+              <dd>RAF Fighter Command, under Air Chief Marshal Sir Hugh Dowding.</dd>
+              <dt>German aim</dt>
+              <dd>Air superiority over southern England, as the precondition for invasion.</dd>
+              <dt>British aim</dt>
+              <dd>Keep Fighter Command in being and deny that air superiority.</dd>
+              <dt>Outcome</dt>
+              <dd>The Luftwaffe did not gain air superiority, and Operation Sea Lion was postponed.</dd>
+            </dl>
+          </aside>
 
         </div>
-
+      </div>
     </section>
 
+    <!-- Key events -->
+    <section class="section section-white" id="events">
+      <div class="wrap">
+        <h2>Key events</h2>
+        <p class="note">Shaded entries are the main turning points.</p>
 
-    <!-- ================= TIMELINE ================= -->
-
-    <section id="timeline" class="section">
-
-        <div class="section-heading">
-            <span>03</span>
-            <h2>BATTLE TIMELINE</h2>
+        <div class="phase">
+          <h3>Channel fighting</h3>
+          <p class="phase-dates">10 July to 11 August</p>
+          <ol class="timeline">
+            <li>
+              <time>10 July</time>
+              <div>
+                <h4>Attacks on Channel convoys</h4>
+                <p>The Luftwaffe steps up attacks on shipping and ports in the Channel. The RAF counts this as the start of the battle.</p>
+              </div>
+            </li>
+            <li>
+              <time>16 July</time>
+              <div>
+                <h4>Directive No. 16</h4>
+                <p>Hitler orders preparations for the invasion of Britain, Operation Sea Lion.</p>
+              </div>
+            </li>
+            <li>
+              <time>1 August</time>
+              <div>
+                <h4>Directive No. 17</h4>
+                <p>The Luftwaffe is ordered to defeat the RAF as quickly as possible, ahead of the main offensive.</p>
+              </div>
+            </li>
+          </ol>
         </div>
 
-        <p class="section-intro">
-            Select an event to examine its significance.
-        </p>
-
-
-        <div class="timeline">
-
-            <div class="timeline-item active"
-                 onclick="showEvent(0)">
-
-                <div class="timeline-date">10 JUL</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>THE BATTLE BEGINS</h3>
-                    <p>Kanalkampf</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(1)">
-
-                <div class="timeline-date">12 AUG</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>RADAR ATTACKS</h3>
-                    <p>Luftwaffe attacks British radar stations</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(2)">
-
-                <div class="timeline-date">13 AUG</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>ADLERTAG</h3>
-                    <p>Eagle Day</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(3)">
-
-                <div class="timeline-date">18 AUG</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>MAJOR CLASHES</h3>
-                    <p>Heavy attacks against Fighter Command</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(4)">
-
-                <div class="timeline-date">7 SEP</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>THE BLITZ BEGINS</h3>
-                    <p>Large-scale attacks on London</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(5)">
-
-                <div class="timeline-date">15 SEP</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>BATTLE OF BRITAIN DAY</h3>
-                    <p>Major daylight Luftwaffe raids</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(6)">
-
-                <div class="timeline-date">17 SEP</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>SEA LION POSTPONED</h3>
-                    <p>German invasion preparations suspended</p>
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item"
-                 onclick="showEvent(7)">
-
-                <div class="timeline-date">31 OCT</div>
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-                    <h3>CONVENTIONAL END</h3>
-                    <p>End of the main daylight battle</p>
-                </div>
-
-            </div>
-
+        <div class="phase">
+          <h3>The assault on Fighter Command</h3>
+          <p class="phase-dates">12 August to 6 September</p>
+          <ol class="timeline">
+            <li>
+              <time>12 August</time>
+              <div>
+                <h4>Radar stations and coastal airfields hit</h4>
+                <p>Raids on the south-coast radar chain and forward airfields open the offensive.</p>
+              </div>
+            </li>
+            <li class="turning">
+              <time>13 August</time>
+              <div>
+                <h4>Adlertag, Eagle Day</h4>
+                <p>The main offensive begins. Poor weather and confused orders make the day's raids uneven.</p>
+              </div>
+            </li>
+            <li>
+              <time>15 August</time>
+              <div>
+                <h4>Heavy fighting along the whole front</h4>
+                <p>A raid from Norway on north-east England suffers heavy losses, and the Luftwaffe does not repeat a daylight attack from Norway on that scale.</p>
+              </div>
+            </li>
+            <li>
+              <time>18 August</time>
+              <div>
+                <h4>The Hardest Day</h4>
+                <p>Both sides suffer heavy losses, and Kenley and Biggin Hill are attacked.</p>
+              </div>
+            </li>
+            <li>
+              <time>20 August</time>
+              <div>
+                <h4>Churchill honours the pilots</h4>
+                <p>In a speech to the House of Commons, Churchill pays tribute to the RAF airmen, later known as "the Few".</p>
+              </div>
+            </li>
+            <li>
+              <time>24 August to 6 September</time>
+              <div>
+                <h4>Sector stations and airfields under sustained attack</h4>
+                <p>The most dangerous period for Fighter Command. Airfields and sector stations in 11 Group are badly damaged, and losses of pilots and aircraft mount.</p>
+              </div>
+            </li>
+            <li>
+              <time>Late August to September</time>
+              <div>
+                <h4>The Big Wing debate</h4>
+                <p>Park (11 Group) and Leigh-Mallory (12 Group) disagree over whether to meet raids with small, quick interceptions or with large formations assembled first.</p>
+              </div>
+            </li>
+            <li>
+              <time>24 to 26 August</time>
+              <div>
+                <h4>London bombed, then Berlin</h4>
+                <p>German bombers hit central London by mistake. The RAF raids Berlin the following night, and this is widely seen as helping to provoke the change of German strategy.</p>
+              </div>
+            </li>
+          </ol>
         </div>
 
-
-        <!-- EVENT INFORMATION -->
-
-        <div id="event-panel" class="event-panel">
-
-            <div>
-                <span id="event-date">10 JULY 1940</span>
-
-                <h3 id="event-title">
-                    THE BATTLE BEGINS
-                </h3>
-
-                <p id="event-description">
-                    The Battle of Britain began with German attacks
-                    against British shipping and targets around the
-                    English Channel.
-                </p>
-            </div>
-
+        <div class="phase">
+          <h3>London and the turning point</h3>
+          <p class="phase-dates">7 to 17 September</p>
+          <ol class="timeline">
+            <li class="turning">
+              <time>7 September</time>
+              <div>
+                <h4>Black Saturday</h4>
+                <p>A massed daylight raid on the London docks. The Luftwaffe shifts its main effort from airfields to London and the Blitz begins, giving Fighter Command room to recover.</p>
+              </div>
+            </li>
+            <li class="turning">
+              <time>15 September</time>
+              <div>
+                <h4>Battle of Britain Day</h4>
+                <p>Two large daylight waves against London are met by the full strength of Fighter Command, and German losses are heavy. The date is commemorated as Battle of Britain Day.</p>
+              </div>
+            </li>
+            <li>
+              <time>17 September</time>
+              <div>
+                <h4>Sea Lion postponed</h4>
+                <p>Hitler postpones the invasion until further notice.</p>
+              </div>
+            </li>
+          </ol>
         </div>
 
+        <div class="phase">
+          <h3>The battle winds down</h3>
+          <p class="phase-dates">October</p>
+          <ol class="timeline">
+            <li>
+              <time>12 October</time>
+              <div>
+                <h4>Invasion put off until spring 1941</h4>
+                <p>Hitler formally postpones Sea Lion. Daylight raids ebb as the Luftwaffe turns to fighter-bomber sorties and night bombing.</p>
+              </div>
+            </li>
+            <li>
+              <time>31 October</time>
+              <div>
+                <h4>Official end of the battle</h4>
+                <p>The night Blitz on British cities continues into 1941.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
     </section>
 
+    <!-- Resources -->
+    <section class="section section-dark" id="resources">
+      <div class="wrap">
+        <h2>Resources</h2>
+        <p class="intro">Choose a category to show it. Choose it again to hide it.</p>
 
-    <!-- ================= TURNING POINTS ================= -->
-
-    <section id="turning-points" class="section dark-section">
-
-        <div class="section-heading">
-            <span>04</span>
-            <h2>KEY TURNING POINTS</h2>
+        <div class="media-buttons">
+          <button class="media-btn" type="button" data-kind="images" aria-expanded="false" aria-controls="panel-images">Images <span class="count"></span></button>
+          <button class="media-btn" type="button" data-kind="pamphlets" aria-expanded="false" aria-controls="panel-pamphlets">Pamphlets <span class="count"></span></button>
+          <button class="media-btn" type="button" data-kind="videos" aria-expanded="false" aria-controls="panel-videos">Videos <span class="count"></span></button>
+          <button class="media-btn" type="button" data-kind="booklet" aria-expanded="false" aria-controls="panel-booklet">Booklet <span class="count"></span></button>
         </div>
 
-        <div class="turning-grid">
+        <p class="media-hint" id="media-hint">Nothing is showing yet.</p>
 
-            <div class="turn-card">
-                <span>01</span>
-                <h3>RADAR & EARLY WARNING</h3>
-                <p>
-                    Early detection allowed Fighter Command to direct
-                    limited fighter resources more efficiently.
-                </p>
-            </div>
-
-
-            <div class="turn-card">
-                <span>02</span>
-                <h3>ATTACKS ON AIRFIELDS</h3>
-                <p>
-                    German attacks placed significant pressure on
-                    Fighter Command's operational infrastructure.
-                </p>
-            </div>
-
-
-            <div class="turn-card">
-                <span>03</span>
-                <h3>SHIFT TO LONDON</h3>
-                <p>
-                    The German shift toward London changed the pressure
-                    placed on Fighter Command and its airfields.
-                </p>
-            </div>
-
-
-            <div class="turn-card">
-                <span>04</span>
-                <h3>BATTLE OF BRITAIN DAY</h3>
-                <p>
-                    15 September became an important symbolic and
-                    operational moment in the campaign.
-                </p>
-            </div>
-
-        </div>
-
+        <div class="panel" id="panel-images" hidden></div>
+        <div class="panel" id="panel-pamphlets" hidden></div>
+        <div class="panel" id="panel-videos" hidden></div>
+        <div class="panel" id="panel-booklet" hidden></div>
+      </div>
     </section>
 
-
-    <!-- ================= OUTCOME ================= -->
-
-    <section id="outcome" class="section">
-
-        <div class="section-heading">
-            <span>05</span>
-            <h2>OUTCOME</h2>
-        </div>
-
-        <div class="outcome-grid">
-
-            <div class="outcome-main">
-                <h3>Britain remained undefeated in the air.</h3>
-
-                <p>
-                    The Luftwaffe failed to achieve the level of air
-                    superiority required for Operation Sea Lion to proceed
-                    as originally planned.
-                </p>
-            </div>
-
-
-            <div class="outcome-point">
-                <strong>01</strong>
-                <span>Fighter Command survived</span>
-            </div>
-
-            <div class="outcome-point">
-                <strong>02</strong>
-                <span>German air superiority was not achieved</span>
-            </div>
-
-            <div class="outcome-point">
-                <strong>03</strong>
-                <span>Operation Sea Lion was postponed</span>
-            </div>
-
-            <div class="outcome-point">
-                <strong>04</strong>
-                <span>Britain remained in the war</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= LESSONS ================= -->
-
-    <section id="lessons" class="section dark-section">
-
-        <div class="section-heading">
-            <span>06</span>
-            <h2>LESSONS FROM THE BATTLE</h2>
-        </div>
-
-        <div class="lessons-grid">
-
-            <div class="lesson">
-                <span>01</span>
-                <h3>INTEGRATED AIR DEFENCE</h3>
-                <p>
-                    Radar, command and control, communications and
-                    fighter aircraft worked as one defensive system.
-                </p>
-            </div>
-
-
-            <div class="lesson">
-                <span>02</span>
-                <h3>EARLY WARNING</h3>
-                <p>
-                    Detecting an approaching threat early increases the
-                    time available for decision and response.
-                </p>
-            </div>
-
-
-            <div class="lesson">
-                <span>03</span>
-                <h3>COMMAND & CONTROL</h3>
-                <p>
-                    Effective information flow allowed commanders to
-                    allocate limited resources where they were required.
-                </p>
-            </div>
-
-
-            <div class="lesson">
-                <span>04</span>
-                <h3>LOGISTICS & RESILIENCE</h3>
-                <p>
-                    Aircraft, pilots, maintenance, fuel and infrastructure
-                    were all critical to sustaining combat capability.
-                </p>
-            </div>
-
-
-            <div class="lesson">
-                <span>05</span>
-                <h3>HUMAN FACTOR</h3>
-                <p>
-                    Pilot experience, fatigue, training and replacement
-                    rates directly affected operational effectiveness.
-                </p>
-            </div>
-
-
-            <div class="lesson">
-                <span>06</span>
-                <h3>RESILIENT INFRASTRUCTURE</h3>
-                <p>
-                    A defensive system must continue functioning even
-                    when individual installations are damaged.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ARCHIVE ================= -->
-
-    <section id="archive" class="section archive-section">
-
-        <div class="section-heading">
-            <span>07</span>
-            <h2>HISTORICAL ARCHIVE</h2>
-        </div>
-
-        <p class="section-intro">
-            Explore the supporting material separately.
-        </p>
-
-
-        <div class="archive-grid">
-
-            <!-- IMAGES -->
-
-            <button class="archive-card"
-                    onclick="openArchive('images')">
-
-                <div class="archive-icon">◉</div>
-
-                <h3>IMAGES</h3>
-
-                <p>
-                    Aircraft, commanders, radar stations,
-                    maps and historical photographs.
-                </p>
-
-                <span>OPEN GALLERY →</span>
-
-            </button>
-
-
-            <!-- VIDEOS -->
-
-            <button class="archive-card"
-                    onclick="openArchive('videos')">
-
-                <div class="archive-icon">▶</div>
-
-                <h3>VIDEOS</h3>
-
-                <p>
-                    Documentary footage, interviews and
-                    historical film material.
-                </p>
-
-                <span>OPEN VIDEOS →</span>
-
-            </button>
-
-
-            <!-- PAMPHLETS -->
-
-            <button class="archive-card"
-                    onclick="openArchive('pamphlets')">
-
-                <div class="archive-icon">▤</div>
-
-                <h3>PAMPHLETS</h3>
-
-                <p>
-                    Wartime propaganda, public information
-                    and historical pamphlets.
-                </p>
-
-                <span>OPEN PAMPHLETS →</span>
-
-            </button>
-
-
-            <!-- BOOKLETS -->
-
-            <button class="archive-card"
-                    onclick="openArchive('booklets')">
-
-                <div class="archive-icon">▥</div>
-
-                <h3>BOOKLETS</h3>
-
-                <p>
-                    Historical documents, military publications
-                    and reference booklets.
-                </p>
-
-                <span>OPEN BOOKLETS →</span>
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ARCHIVE MODAL ================= -->
-
-    <div id="archive-modal" class="modal">
-
-        <div class="modal-content">
-
-            <button class="close-btn"
-                    onclick="closeArchive()">
-                ×
-            </button>
-
-            <h2 id="modal-title">
-                ARCHIVE
-            </h2>
-
-            <p id="modal-description"></p>
-
-            <div id="media-container"
-                 class="media-container">
-
-                <!-- JavaScript will load content here -->
-
-            </div>
-
-        </div>
-
+  </main>
+
+  <footer class="site-footer">
+    <p>Sources: list your references here.</p>
+  </footer>
+
+  <!-- Full-screen viewer for images, pamphlets and PDFs -->
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <p id="viewer-title"></p>
+      <div class="viewer-actions">
+        <button id="viewer-prev" type="button">Previous</button>
+        <button id="viewer-next" type="button">Next</button>
+        <button id="viewer-close" type="button">Close</button>
+      </div>
     </div>
+    <div id="viewer-body"></div>
+  </dialog>
 
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-            BATTLE OF BRITAIN
-            <span>1940</span>
-        </p>
-
-        <p class="footer-small">
-            Military History Presentation
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
