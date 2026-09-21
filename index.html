@@ -666,7 +666,53 @@
 
     </footer>
 
+<!-- ================= FULL IMAGE VIEWER ================= -->
 
+<div id="image-viewer" class="image-viewer">
+
+    <button
+        class="viewer-close"
+        onclick="closeImageViewer()">
+        ×
+    </button>
+
+
+    <button
+        class="viewer-prev"
+        onclick="previousImage()">
+        ‹
+    </button>
+
+
+    <div class="viewer-content">
+
+        <img
+            id="viewer-image"
+            src=""
+            alt="Battle of Britain image">
+
+        <div class="viewer-caption">
+
+            <h3 id="viewer-title">
+                Image
+            </h3>
+
+            <p id="viewer-description">
+                Historical image
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="viewer-next"
+        onclick="nextImage()">
+        ›
+    </button>
+
+</div>
     <script src="script.js"></script>
 
 </body>
