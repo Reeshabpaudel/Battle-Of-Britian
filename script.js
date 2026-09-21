@@ -15,7 +15,7 @@ const events = [
         date: "12 AUGUST 1940",
         title: "RADAR ATTACKS",
         description:
-            "The Luftwaffe began attacking important British radar stations and other Fighter Command infrastructure. Radar was a critical part of Britain's early-warning network."
+            "The Luftwaffe began attacking important British radar stations and other Fighter Command infrastructure."
     },
 
     {
@@ -36,7 +36,7 @@ const events = [
         date: "7 SEPTEMBER 1940",
         title: "THE BLITZ BEGINS",
         description:
-            "The Luftwaffe shifted its main daylight bombing effort toward London. The campaign against the capital marked a major change in German targeting."
+            "The Luftwaffe shifted its main daylight bombing effort toward London."
     },
 
     {
@@ -57,7 +57,7 @@ const events = [
         date: "31 OCTOBER 1940",
         title: "CONVENTIONAL END OF THE BATTLE",
         description:
-            "31 October is commonly used as the conventional end date of the Battle of Britain, although German bombing of Britain continued afterward."
+            "31 October is commonly used as the conventional end date of the Battle of Britain."
     }
 
 ];
@@ -80,20 +80,14 @@ function showEvent(index) {
     document.getElementById("event-description").textContent =
         event.description;
 
-
     const items =
         document.querySelectorAll(".timeline-item");
 
-
     items.forEach(item => {
-
         item.classList.remove("active");
-
     });
 
-
     items[index].classList.add("active");
-
 }
 
 
@@ -118,59 +112,57 @@ function scrollToSection(sectionID) {
 
 
 /* =========================================================
-   ARCHIVE INFORMATION
+   IMAGE GALLERY
 ========================================================= */
 
-const archiveData = {
+/*
+   IMPORTANT:
 
-    images: {
+   These are the filenames exactly as you provided them.
 
-        title: "IMAGES",
+   If GitHub filenames contain spaces, parentheses, etc.,
+   encodeURI() below makes the browser URL-safe.
+*/
 
-        description:
-            "Historical photographs, aircraft, commanders, maps, radar stations and other visual material.",
+const imageGallery = [
 
-        folder: "images/"
-
+    {
+        file: "OIP (1).webp",
+        title: "Historical Image 01",
+        description: "Battle of Britain historical material."
     },
 
-
-    videos: {
-
-        title: "VIDEOS",
-
-        description:
-            "Historical footage and documentary material related to the Battle of Britain.",
-
-        folder: "videos/"
-
+    {
+        file: "OIP (3).webp",
+        title: "Historical Image 02",
+        description: "Battle of Britain historical material."
     },
 
-
-    pamphlets: {
-
-        title: "PAMPHLETS",
-
-        description:
-            "Wartime pamphlets, posters, public information material and propaganda documents.",
-
-        folder: "pamphlets/"
-
+    {
+        file: "OIP.webp",
+        title: "Historical Image 03",
+        description: "Battle of Britain historical material."
     },
 
+    {
+        file: "WhatsApp Image 2026-09-10 at 11.19.06.jpeg",
+        title: "Historical Image 04",
+        description: "Battle of Britain historical material."
+    },
 
-    booklets: {
+    {
+        file: "inclass 1.heic",
+        title: "Historical Image 05",
+        description: "HEIC image. Convert to JPG or WebP if it does not display."
+    },
 
-        title: "BOOKLETS",
-
-        description:
-            "Historical booklets, military publications and reference documents.",
-
-        folder: "booklets/"
-
+    {
+        file: "testimage",
+        title: "Test Image",
+        description: "Test image. Add an extension if required."
     }
 
-};
+];
 
 
 /* =========================================================
@@ -179,18 +171,14 @@ const archiveData = {
 
 function openArchive(type) {
 
-    const data = archiveData[type];
+    const modal =
+        document.getElementById("archive-modal");
 
-    if (!data) return;
+    const title =
+        document.getElementById("modal-title");
 
-
-    document.getElementById("modal-title").textContent =
-        data.title;
-
-
-    document.getElementById("modal-description").textContent =
-        data.description;
-
+    const description =
+        document.getElementById("modal-description");
 
     const container =
         document.getElementById("media-container");
@@ -199,47 +187,73 @@ function openArchive(type) {
     container.innerHTML = "";
 
 
-    /*
-       IMPORTANT:
-
-       Browsers cannot automatically list every file
-       inside a folder.
-
-       Therefore, for now, we use a simple placeholder.
-
-       Later, when you give me the actual filenames,
-       we can replace this with the real files.
-    */
-
+    /* ================= IMAGES ================= */
 
     if (type === "images") {
 
-        container.innerHTML = `
+        title.textContent = "IMAGES";
 
-            <div class="media-item">
+        description.textContent =
+            "Historical photographs, aircraft, commanders, maps and other visual material.";
 
-                <img src="images/example.jpg"
-                     alt="Battle of Britain">
+        container.className = "media-container image-gallery";
 
-                <div class="media-info">
 
-                    <h4>Example Image</h4>
+        imageGallery.forEach((image, index) => {
 
-                    <p>
-                        Replace this image with your
-                        historical photograph.
-                    </p>
+            const card =
+                document.createElement("div");
+
+            card.className = "gallery-card";
+
+
+            card.innerHTML = `
+
+                <div class="gallery-image-wrapper">
+
+                    <img
+                        src="images/${encodeURI(image.file)}"
+                        alt="${image.title}"
+                        loading="lazy"
+                        onclick="openImageViewer(${index})"
+                        onerror="this.parentElement.classList.add('image-error')"
+                    >
+
+                    <div class="image-number">
+                        ${String(index + 1).padStart(2, "0")}
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="gallery-info">
 
-        `;
+                    <h4>${image.title}</h4>
+
+                    <p>${image.description}</p>
+
+                </div>
+
+            `;
+
+
+            container.appendChild(card);
+
+        });
 
     }
 
 
+    /* ================= VIDEOS ================= */
+
     else if (type === "videos") {
+
+        title.textContent = "VIDEOS";
+
+        description.textContent =
+            "Historical footage and documentary material related to the Battle of Britain.";
+
+        container.className = "media-container";
+
 
         container.innerHTML = `
 
@@ -261,8 +275,7 @@ function openArchive(type) {
                     <h4>Example Video</h4>
 
                     <p>
-                        Replace example.mp4 with
-                        your video.
+                        Replace example.mp4 with your video.
                     </p>
 
                 </div>
@@ -274,7 +287,17 @@ function openArchive(type) {
     }
 
 
+    /* ================= PAMPHLETS ================= */
+
     else if (type === "pamphlets") {
+
+        title.textContent = "PAMPHLETS";
+
+        description.textContent =
+            "Wartime pamphlets, posters and public information material.";
+
+        container.className = "media-container";
+
 
         container.innerHTML = `
 
@@ -291,7 +314,17 @@ function openArchive(type) {
     }
 
 
+    /* ================= BOOKLETS ================= */
+
     else if (type === "booklets") {
+
+        title.textContent = "BOOKLETS";
+
+        description.textContent =
+            "Historical booklets and military publications.";
+
+        container.className = "media-container";
+
 
         container.innerHTML = `
 
@@ -308,12 +341,109 @@ function openArchive(type) {
     }
 
 
-    document
-        .getElementById("archive-modal")
-        .classList.add("show");
-
+    modal.classList.add("show");
 
     document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   FULL IMAGE VIEWER
+========================================================= */
+
+function openImageViewer(index) {
+
+    const image = imageGallery[index];
+
+    const viewer =
+        document.getElementById("image-viewer");
+
+    const viewerImage =
+        document.getElementById("viewer-image");
+
+    const viewerTitle =
+        document.getElementById("viewer-title");
+
+    const viewerDescription =
+        document.getElementById("viewer-description");
+
+
+    viewerImage.src =
+        "images/" + encodeURI(image.file);
+
+    viewerImage.alt =
+        image.title;
+
+    viewerTitle.textContent =
+        image.title;
+
+    viewerDescription.textContent =
+        image.description;
+
+
+    viewer.dataset.currentIndex = index;
+
+    viewer.classList.add("show");
+
+}
+
+
+/* =========================================================
+   NEXT IMAGE
+========================================================= */
+
+function nextImage() {
+
+    const viewer =
+        document.getElementById("image-viewer");
+
+    let current =
+        parseInt(viewer.dataset.currentIndex);
+
+    current++;
+
+    if (current >= imageGallery.length) {
+        current = 0;
+    }
+
+    openImageViewer(current);
+
+}
+
+
+/* =========================================================
+   PREVIOUS IMAGE
+========================================================= */
+
+function previousImage() {
+
+    const viewer =
+        document.getElementById("image-viewer");
+
+    let current =
+        parseInt(viewer.dataset.currentIndex);
+
+    current--;
+
+    if (current < 0) {
+        current = imageGallery.length - 1;
+    }
+
+    openImageViewer(current);
+
+}
+
+
+/* =========================================================
+   CLOSE IMAGE VIEWER
+========================================================= */
+
+function closeImageViewer() {
+
+    document
+        .getElementById("image-viewer")
+        .classList.remove("show");
 
 }
 
@@ -328,14 +458,13 @@ function closeArchive() {
         .getElementById("archive-modal")
         .classList.remove("show");
 
-
     document.body.style.overflow = "auto";
 
 }
 
 
 /* =========================================================
-   CLOSE MODAL WHEN CLICKING OUTSIDE
+   CLOSE MODALS BY CLICKING OUTSIDE
 ========================================================= */
 
 document
@@ -351,15 +480,60 @@ document
     });
 
 
+document
+    .getElementById("image-viewer")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            closeImageViewer();
+
+        }
+
+    });
+
+
 /* =========================================================
-   ESC KEY CLOSES MODAL
+   KEYBOARD CONTROLS
 ========================================================= */
 
 document.addEventListener("keydown", function(event) {
 
+    const viewer =
+        document.getElementById("image-viewer");
+
+    const archive =
+        document.getElementById("archive-modal");
+
+
     if (event.key === "Escape") {
 
-        closeArchive();
+        if (viewer.classList.contains("show")) {
+
+            closeImageViewer();
+
+        } else {
+
+            closeArchive();
+
+        }
+
+    }
+
+
+    if (viewer.classList.contains("show")) {
+
+        if (event.key === "ArrowRight") {
+
+            nextImage();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            previousImage();
+
+        }
 
     }
 
